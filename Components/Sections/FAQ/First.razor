@@ -1,0 +1,22 @@
+<MudExpansionPanel
+    @bind-IsExpanded="isOpen"
+    HideIcon="true"
+    Class="py-[6px] lg:py-[20px] justify-between w-full">
+    <TitleContent>
+        <div class="py-[10px] flex justify-between items-center w-full">
+            <MudText Class="text-[var(--mud-palette-primary)] flex justify-between before:content-['01'] before:mr-[30px] work-sans text-[18px] md:text-[25px] lg:text-[30px] xl:text-[45px] font-[800] text-left leading-[20px] xl:leading-[40px]">What is Freshlay?</MudText>
+            <MudImage
+                Src="@(isOpen ? "assets/landing/faq/desktop/collapse.svg" : "assets/landing/faq/desktop/expand.svg")" Class="w-[27px] lg:w-[35px] xl:w-[50px] 2xl:w-[70px]"/>
+        </div>
+    </TitleContent>
+    <ChildContent>
+        <div class="text-[var(--mud-palette-tertiary)]">
+            Freshlay is an innovative platform that connects consumers with the freshest, high-quality produce directly sourced from local producers. It's a convenient way to access locally grown food.
+        </div>
+    </ChildContent> 
+</MudExpansionPanel>
+
+@code
+{
+    bool isOpen;
+}

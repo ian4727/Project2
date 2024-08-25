@@ -1,0 +1,130 @@
+@page "/login"
+
+<PageTitle>Login | Freshlay</PageTitle>
+
+<main class="flex flex-col-reverse xl:flex-row justify-center items-center text-textprimary tracking-tighter h-full md:h-full md:w-screen md:min-h-screen xl:h-screen xl:px-14 2xl:px-[60px] px-[30px] md:px-16 py-16 md:py-12 xl:bg-inherit md:bg-[url('assets/general/vector-2.svg')] xl:bg-none md:bg-contain md:bg-no-repeat md:bg-[center_bottom_120px]">
+    <nav class="flex flex-col xl:justify-between items-center xl:items-start xl:grow w-full xl:w-80 2xl:w-96 h-full md:h-full md:w-full xl:h-full 2xl:max-h-[1080px] xl:pr-14 2xl:pr-16 z-40 md:rounded-[18px] md:p-14 xl:p-0  md:backdrop-blur-xl xl:backdrop-blur-none xl:bg-none shadow-none md:shadow-lg xl:shadow-none ">
+        <div>
+            <MudImage
+            Src="assets/general/logo.svg"
+            Alt="Logo"
+            Class="w-96 hidden md:block xl:w-56 2xl:w-64"/>
+        </div>
+        <p class="text-center xl:text-left text-xl my-[24px] md:my-[50px]">
+            Welcome &#x1F44B;&nbsp; How would you like to connect?
+        </p>
+        <div class="w-full flex flex-col gap-4">
+            <MudCard
+                Class="border-none h-14 xl:h-14 2xl:h-[58px] font-bold !bg-[var(--mud-palette-secondary)] !rounded-[18px] flex shadow-lg items-center p-3">
+                <MudButton
+                    Class="flex justify-space-between !rounded-[18px] w-full !px-[25px]"
+                    EndIcon="@Icons.Material.Filled.ArrowForwardIos">
+                    <span class="text-xl font-medium normal-case">Email</span>
+                </MudButton>
+            </MudCard>
+            <MudCard
+                Class="border-none h-14 xl:h-14 2xl:h-[58px] font-bold !bg-[var(--mud-palette-secondary)] !rounded-[18px] flex shadow-lg items-center p-3">
+                <MudButton
+                    Class="flex justify-space-between !rounded-[18px] w-full !px-[25px]"
+                    EndIcon="@Icons.Material.Filled.ArrowForwardIos">
+                    <span class="text-xl font-medium normal-case">Phone Number</span>
+                </MudButton>
+            </MudCard>
+            <MudCard
+                Class="border-none h-14 xl:h-14 2xl:h-[58px] font-bold !bg-[var(--mud-palette-secondary)] !rounded-[18px] flex shadow-lg items-center p-3">
+                <MudButton
+                    Class="flex justify-space-between !rounded-[18px] w-full !px-[25px]"
+                    EndIcon="@Icons.Material.Filled.ArrowForwardIos">
+                    <span class="text-xl font-medium normal-case">Google</span>
+                </MudButton>
+            </MudCard>
+            <MudCard
+                Class="border-none h-14 xl:h-14 2xl:h-[58px] font-bold !bg-[var(--mud-palette-secondary)] !rounded-[18px] flex shadow-lg items-center p-3">
+                <MudButton
+                    Class="flex justify-space-between !rounded-[18px] w-full !px-[25px]"
+                    EndIcon="@Icons.Material.Filled.ArrowForwardIos">
+                    <span class="text-xl font-medium normal-case">Apple</span>
+                </MudButton>
+            </MudCard> 
+        </div>
+        <MudCard
+            Elevation="4"
+            Class="flex flex-column justify-evenly align-center xl:content-around w-full md:w-full h-52 xl:h-48 2xl:h-[200px] 2xl:mr-8 my-[24px] md:my-[50px] 2xl:mt-5 bg-[var(--mud-palette-info)] rounded-[20px] 2xl:py-4">
+            <p class="text-[25px] xl:text-[20px] font-[800]">
+                Need help?
+            </p>
+            <div class="">
+                <MudLink Href="/Project1/">
+                    <MudButton
+                        Variant="Variant.Filled"
+                        Class="custom-text-transform-none w-[200px] h-[65px] xl:w-[150px] xl:h-[50px] 2xl:w-[170px] rounded-[15px] !bg-[var(--mud-palette-primary)]">
+                        <p class="text-xl xl:text-[15px] 2xl:text-[18px] font-[800] !text-[var(--mud-palette-white)]">
+                            Back to Home
+                        </p>
+                    </MudButton>   
+                </MudLink>     
+            </div>
+        </MudCard>
+        <div class="text-lg xl:text-[15px] 2xl:text-[18px] text-center xl:text-left xl:mt-2 xl:ml-2 md:bg-[var(--mud-palette-white)] md:rounded-[18px] xl:bg-inherit md:p-4 xl:p-0 shadow-none md:shadow-lg xl:shadow-none">
+            <p>By logging in, you agree to our
+                <a href="#" class="text-[var(--mud-palette-warning)]">terms of service</a>
+                and
+                <a href="#" class="text-[var(--mud-palette-warning)]">privacy policy.</a>
+            </p>   
+        </div> 
+    </nav>
+    <div class="hidden md:block xl:hidden md:max-h-[40%] xl:max-h-[35%] bottom-[0] z-0">
+        <MudImage
+            Src="assets/general/fruits-and-veggies.png"
+            Class="absolute bottom-[0] left-1/2 transform -translate-x-1/2 z-10 xl:w-[68%]"
+            Alt="Goods Crate" />
+        <MudImage
+            Src="assets/products/pepper.png"
+            Class="absolute z-20 bottom-[300px] left-[130px] md:w-[150px]"
+            Alt="Pepper" />
+        <MudImage
+            Src="assets/products/lettuce.png"
+            Class="bottom-[260px] right-[10%] absolute rotate-[20deg] z-20 w-[13%]"
+            Alt="Lettuce" />
+    </div>
+    <section class="xl:flex justify-center align-center w-full md:w-full md:h-full xl:w-[85%] 2xl:w-[78%] md:hidden">
+        <MudCard
+            Class="bg-[var(--mud-palette-primary-lighten)] flex flex-col md:justify-end xl:justify-center rounded-xl relative bg-[url('assets/login/mobile/vector2s.svg')] xl:bg-[url('assets/general/vector-2.svg')] bg-contain md:bg-cover bg-no-repeat bg-[center_bottom_1px] xl:bg-[center_bottom_10px] xl:tracking-wide w-full h-72 xl:h-full xl:max-w-[1600px] 2xl:max-h-[1094px] 2xl:min-h-[700px] md:h-full bg-opacity-50 mud-elevation-4">
+            <div class="text-[33px] md:text-[55px] 2xl:text-[72px] md:hidden xl:flex flex-col text-center content-center md:mt-36 pt-8 md:px-4 max-w-[200px] md:max-w-[500px] xl:max-w-[500px] 2xl:max-w-[660px] m-auto grow z-20">
+                <div class="font-[700] mb-2 2xl:mb-[40px] work-sans">
+                    <p class="leading-[35px] md:leading-[58px] 2xl:leading-[70px] tracking-wide xl:tracking-tight">
+                        Bringing
+                        <span class="italic underline decoration-2 underline-offset-4 font-normal tracking-tight montserrat">
+                            the farm
+                        </span>
+                        to your doorstep.
+                    </p>
+                </div>
+                <div class="hidden md:block md:text-[16px] 2xl:text-[24px] font-normal text-center xl:mt-[20px] 2xl:mt-[40px] z-20">
+                    <p>Join the Freshlay community by signing up</p>
+                    <p>and creating your account.</p>
+                </div>
+            </div>
+            <div class="relative w-full h-full xl:max-h-[37%]">
+                <div class="z-10 xl:w-[68%] md:opacity-50 xl:opacity-100">
+                    <MudImage
+                        src="assets/general/fruits-and-veggies.png"
+                        class="absolute bottom-[0] left-1/2 transform -translate-x-1/2" />
+                </div>
+                <div class="hidden xl:block absolute z-20 left-[80px] 2xl:left-[160px] w-[160px] 2xl:w-[160px]">
+                    <MudImage src="assets/products/pepper.png" />
+                </div>
+                <div class="hidden xl:block 2xl:top-[1px] right-[100px] 2xl:right-[150px] absolute rotate-[20deg] z-20 w-[160px] 2xl:w-[160px]">
+                    <MudImage src="assets/products/lettuce.png" />
+                </div>
+            </div>
+        </MudCard> 
+    </section>
+    <div class="flex justify-center">
+        <MudImage
+            Src="assets/general/logo.svg"
+            Alt="Logo"
+            class="w-60 md:hidden mb-6" />
+    </div>
+</main>
+

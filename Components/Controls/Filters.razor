@@ -1,0 +1,80 @@
+<div class="xl:w-[200px] h-[50%] items- xl:items-start">
+    <button class="flex items-center w-[90px] xl:w-[110px] justify-between hover:text-[var(--mud-palette-primary-darken)] mb-[15px]">
+        <div>
+            <MudImage Src="assets/dashboard/filter.svg" />
+        </div>
+        <h3 class="text-[20px] xl:text-[24px] font-[700]">Filters</h3>
+    </button>
+    <MudExpansionPanels 
+        Class="rounded-[15px] hidden xl:block">
+        <MudExpansionPanel
+            Text="Brand"
+            Class="pl-[15px] pr-[8px] bg-[var(--mud-palette-secondary)] my-[15px] rounded-[15px] shadow-lg">
+            <div class="ml-[-75px] w-[200px]">
+                Brand content
+            </div>
+        </MudExpansionPanel>
+        <MudExpansionPanel
+            Text="Rating"
+            Class="pl-[15px] pr-[8px] bg-[var(--mud-palette-secondary)] my-[15px] rounded-[15px] shadow-lg">
+            <div class="ml-[-75px] w-[200px]">
+                Rating content
+            </div>
+        </MudExpansionPanel>
+        <MudExpansionPanel
+            Text="Sort By"
+            Class="pl-[15px] pr-[8px] bg-[var(--mud-palette-secondary)] rounded-[15px] shadow-lg mt-[15px]">
+            <MudForm Class="ml-[-80px]">
+                <MudRadioGroup
+                    @bind-Value="@SelectedOption"
+                    Class="flex flex-col items-start">
+                    <div class="flex items-center">
+                        <MudRadio Value="@("Radio1")" Class="relative">
+                            <ChildContent>
+                                <div class="absolute top-[13px] left-[3px] w-[21px] h-[21px] mx-[10px]" 
+                                    style="background-color: @(SelectedOption == "Radio1" ? "var(--mud-palette-primary)" : "var(--mud-palette-primary-lighten)")">
+                                </div>
+                            </ChildContent>
+                        </MudRadio>
+                        <div class="w-[150px] m-[-20px]">
+                            A to Z
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <MudRadio Value="@("Radio2")" Class="relative">
+                            <ChildContent>
+                                <div class="absolute top-[13px] left-[3px] w-[21px] h-[21px] mx-[10px]" 
+                                    style="background-color: @(SelectedOption == "Radio2" ? "var(--mud-palette-primary)" : "var(--mud-palette-primary-lighten)")">
+                                </div>
+                            </ChildContent>
+                        </MudRadio>
+                        <div class="w-[150px] m-[-20px]">
+                            Z to A
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <MudRadio Value="@("Radio3")" Class="relative">
+                            <ChildContent>
+                                <div class="absolute top-[13px] left-[3px] w-[21px] h-[21px] mx-[10px]" 
+                                    style="background-color: @(SelectedOption == "Radio3" ? "var(--mud-palette-primary)" : "var(--mud-palette-primary-lighten)")">
+                                </div>
+                            </ChildContent>
+                        </MudRadio>
+                        <div class="w-[150px] m-[-20px]">
+                            Price Low to High
+                        </div>
+                    </div>
+                </MudRadioGroup>
+            </MudForm> 
+        </MudExpansionPanel>
+    </MudExpansionPanels>
+</div>
+
+@code {
+    public string SelectedOption { get; set; } = string.Empty;
+
+    private void Reset()
+    {
+        SelectedOption = null;
+    }
+}
