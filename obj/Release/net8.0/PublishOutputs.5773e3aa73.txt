@@ -1,2 +1,0 @@
-/Users/ian/Projects/TestBlazorApp/publish/package-lock.json
-/Users/ian/Projects/TestBlazorApp/publish/web.config
