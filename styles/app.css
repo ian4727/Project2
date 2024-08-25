@@ -1,0 +1,197 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --green-color: #145240;
+    --login-btn-bg-color: #F8F9F8;
+    --login-btn-bg-color2: #f1f1f1;
+    --pink-color: #F88FCD;
+    --lightgreen-color: #DEE7D3;
+    --mud-palette-white-transparent: rgba(255, 255, 255, 0.60);
+    --mud-palette-primary-lighten: #DEE7D3;
+
+    .custom-text-transform-none {
+        text-transform: none !important;
+    }
+
+    .rounded {
+        border-radius: 15px;
+    }
+
+    body{
+        padding: 0 !important;
+    }
+
+    .px-20,
+    .pt-10,
+    .py-10 {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .ml-2,
+    .mx-2 {
+        margin-left: 0 !important;
+    }
+
+    .work-sans {
+        font-family: 'Work Sans', sans-serif;
+    }
+
+    .montserrat {
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .input-text {
+        color: #999A99 !important;
+    }
+
+    .mud-button-group-text.mud-button-group-override-styles.mud-button-group-vertical .mud-button-root:not(:last-child),
+    .mud-button-group-text.mud-button-group-override-styles.mud-button-group-vertical > :not(:last-child) .mud-button-root {
+        border-bottom: none; 
+    }
+
+    .bg-transparent-75 {
+        background-color: rgba(var(--mud-palette-white-rgb), 0.85);
+    }
+
+    .bg-transparent-85 {
+        background-color: rgba(222, 231, 211, 0.30);
+    }
+
+    .bg-transparent-95 {
+        background-color: rgba(222, 231, 211, 0.50);
+    }
+
+    .mud-input.mud-input-underline:before {
+        /* left:0; */
+        /* right:0; */
+        /* bottom:0; */
+        content: " ";
+        position: absolute;
+        transition: border-bottom .2s,background-color .2s;
+        border-bottom: 0;
+        pointer-events: none
+    }
+
+    .mud-input>input.mud-input-root,div.mud-input-slot.mud-input-root {
+        font-size: 20px;
+        font-weight: 500;
+        /* width: 300px; */
+        border: 0;
+        height: 2em;
+        margin: 0;
+        padding: 0;
+        display: block;
+        background: none;
+        position: relative;
+        box-sizing: content-box;
+        letter-spacing: -1px;
+        text-align: left;
+        -webkit-tap-highlight-color: rgba(0,0,0,0)
+    }
+
+    .mud-input-control>.mud-input-control-input-container>div.mud-input.mud-input-text {
+        margin-top: 0px
+    }
+
+    .custom-link {
+        color: var(--mud-palette-primary-lighten) !important;
+        transition: color 0.3s ease;
+        text-decoration-line: none;
+    }
+    
+    .custom-link:hover {
+        color: var(--mud-palette-success-lighten) !important;
+        text-decoration-line: none;
+    }
+
+    .custom-link:active {
+        text-decoration-line: none;
+    }
+
+    .mud-expand-panel .mud-expand-panel-header {
+        width: 100%;
+        align-items: center;
+        display: flex;
+        line-height: 1;
+        min-height: 48px;
+        outline: none;
+        padding: 0;
+        position: relative;
+        transition: min-height .3s cubic-bezier(0.25, 0.8, 0.5, 1);
+        user-select: none
+    }
+
+    .mud-expand-panel.mud-panel-expanded {
+        margin:0;
+    }
+   
+    .faq-panels .MudExpansionPanel > .MudExpansionPanel-childcontent {
+        margin-left: 50px;
+    }
+
+    .mud-expand-panel .mud-expand-panel-content {
+        padding: 0 55px 16px;
+    }
+    
+    @media (min-width: 550px) {
+        .mud-expand-panel .mud-expand-panel-content {
+            padding: 0 60px 16px;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .mud-expand-panel .mud-expand-panel-content {
+            padding: 0 70px 16px;
+        }
+    }
+
+    @media (min-width: 1280px) {
+        .mud-expand-panel .mud-expand-panel-content {
+            padding: 0 85px 16px;
+        }
+    }
+
+    .mud-navmenu.mud-navmenu-default .mud-nav-link.active:not(.mud-nav-link-disabled) {
+        background-color:unset;
+    }
+
+    .mud-input.mud-input-underline:after {
+        border-bottom: none;
+    }
+
+    .mud-nav-link {
+        /* font-weight: 900; */
+        padding:0;
+        display:inline;
+        align-items: center;
+        justify-content: center;
+        align-items: center;
+        margin-left: 0;
+        margin-inline-start: 0;
+    }
+
+    .bold {
+        font-weight: 900;
+    }
+
+    /* .mud-button {
+        padding: 0;
+        /* min-width: 0; */
+        /* box-sizing: border-box;
+        border-radius:var(--mud-default-borderradius);
+        color: var(--mud-palette-text-primary); */
+        /* min-width:unset; 
+    } */
+
+    .mud-input-control {
+        margin-top: 0;
+    }
+
+    ::deep .custom-box input[type="radio"] {
+        display: none !important;
+    }
+
+}
